@@ -1,6 +1,6 @@
 # Parallel RoMaV2 densification
 
-Source snapshot of the completed September 25, 2026 Insta360 X5 densification workflow. It preserves the parallel driver, project-local plugin fixes, and the exact local RoMaV2 Python source used by that workflow. The original processing workspace is unchanged.
+Parallel densification based on the completed September 25, 2026 Insta360 X5 workflow. The initial commit preserves that run's source; subsequent fixes are described below. The original processing workspace is unchanged.
 
 ## Workflow
 
@@ -21,8 +21,10 @@ The local plugin fixes confidence filtering, sampling when masks leave few candi
 - `docs/INSTA360_WORKFLOW.md`: original workflow notes.
 - `reports/insta360-2026-09-25/`: original completion and validation records.
 - `docs/source-manifest.json`: original paths and SHA-256 hashes for copied files.
+- `benchmark_modes.py`: bounded, sequential comparison using the same prepared references and neighbors.
+- `tests/test_resolution.py`: CPU regression checks without model downloads or GPU inference.
 
-Images, videos, masks, reconstructions, point clouds, trained splats, checkpoints, weights and runtime logs are not included. The JSON records are historical results, not results from a fresh run of this repository.
+Images, videos, masks, reconstructions, point clouds, trained splats, checkpoints, weights and runtime logs are not included. The September 25 JSON records describe the original run; the September 29 records describe the new preset comparison.
 
 ## Environment
 
@@ -76,6 +78,48 @@ The driver supports rectified PINHOLE cameras only. It identifies tiles from the
 The three original orchestration scripts intentionally retain the original dataset layout and absolute interpreter/source paths. They are a preserved project recipe, not a portable one-command launcher. Review paths before running: they write logs, reports, output clouds and viewer state.
 
 The expected parent reconstruction contains `upright/B/manhattan/sparse/0`, `upright/manifest.json`, `images`, `combined_masks`, and `web/state.json`. `prepare_views.py` generates the 1,240 masked perspective views. Run the driver's `prep` step against `perspective/sparse/0`, `perspective/images`, and `perspective/masks` to create `dense_output/prep.pkl`, then use `run_parallel.py` after adjusting its interpreter paths and `config.json` source path. `run_parallel.py` invokes `finalize_dense.py` and packages the initialization dataset; it does not train a splat. See the original notes for rig assumptions and validation checks.
+
+## High-resolution refinement fix (September 29)
+
+`high` now loads source images and masks at 960×960, and `precise` at 1280×1280. The matcher derives its 640×640 or 800×800 feature input from those images. Previously the loader reduced everything to the feature resolution first, so the second refinement pass received an upscaled low-resolution image. `turbo`, `fast`, and `base` retain their existing input sizes. Normalized correspondences are still converted to original camera coordinates for triangulation and reprojection filtering.
+
+The wrapper disables reverse-direction inference because this densification pipeline only consumes reference-to-neighbor matches. This preserves each mode's forward matching and refinement resolutions, but deliberately does not produce upstream bidirectional outputs. The original vendor source and historical run reports remain unchanged; hashes in `docs/source-manifest.json` describe the initial snapshot, including the pre-fix wrapper.
+
+Run the CPU regression tests with the matching environment:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+For a small GPU comparison, use a trusted preparation file and a new output directory:
+
+```bash
+python benchmark_modes.py --prep /path/to/dense_output/prep.pkl --input-root /original/prep/working/directory --output /path/to/new/comparison --refs 12 --neighbors 4 --modes fast precise
+```
+
+The input root resolves relative image and mask paths in memory; the original pickle and dataset are unchanged. The comparison retains four neighbors, 10,000 requested samples per reference, confidence 0.9, the 2-pixel reprojection gate, and a fixed random seed. It runs one worker at a time and records point counts, residuals, elapsed time and peak GPU allocation in `comparison.json`. Residuals and accepted point counts alone do not establish surface accuracy; compare against independent geometry before drawing that conclusion. GPU memory must be measured before restoring six concurrent workers in the higher-resolution modes.
+
+The September 29 trial used 12 evenly spaced references from the 992 prepared references on an RTX 5090:
+
+| Mode | Accepted points | Pipeline wall time | Median reprojection error | Peak allocated GPU memory |
+| --- | ---: | ---: | ---: | ---: |
+| fast | 90,271 | 14.5 s | 0.289 px | 4.55 GiB |
+| precise | 84,807 | 25.5 s | 0.279 px | 15.95 GiB |
+
+Both modes produced finite points from all 12 references and passed the 2-pixel reprojection gate. These are partial, unfiltered trial clouds, not full reconstruction runs. Use one precise worker on this 32 GB GPU; the original six-worker configuration exceeds its available memory. See `reports/insta360-precise-2026-09-29/` for measured results and browser validation.
+
+## Existing point-cloud comparison app
+
+`viewer/point-compare/` extends the existing raw / voxel / density-filtered viewer with fast and precise trial panels. All five panels share camera and display controls, and the trial panels include timing, point counts, residuals and PLY downloads. The original three cloud files and coordinate frame are retained.
+
+Publish a completed comparison into an existing viewer directory:
+
+```bash
+python publish_comparison.py --comparison /path/to/comparison/comparison.json --web-root /path/to/web/point-compare
+python -m http.server 8879 --bind 127.0.0.1 --directory /path/to/web
+```
+
+Open `http://127.0.0.1:8879/point-compare/` on the workstation. Publishing requires the original viewer's `manifest.json` and cloud files; it transforms the trial points into that manifest's coordinate frame and adds their metadata. The server command is local-only and runs until stopped.
 
 ## Recorded result
 

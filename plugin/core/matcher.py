@@ -87,14 +87,21 @@ class RomaMatcher:
             self.model.bidirectional = True
         else:
             self.model.apply_setting(setting)
+        # This pipeline triangulates reference -> neighbor matches only. RoMa's
+        # reverse branch is independent and its output is not consumed here.
+        self.model.bidirectional = False
         self.model.to(self.device)
         self.model.eval()
         self.sample_thresh = 0.9
-        self.w_resized = self.model.W_lr
-        self.h_resized = self.model.H_lr
+        # The loader must retain the detail needed by the final refinement pass.
+        # Feeding W_lr/H_lr images would make high-resolution refinement operate
+        # on upscaled low-resolution pixels instead of the source image detail.
+        self.w_resized = self.model.W_hr or self.model.W_lr
+        self.h_resized = self.model.H_hr or self.model.H_lr
         self._grid_cache: Dict[Tuple[int, int], torch.Tensor] = {}
         lf.log.info(
-            f"RoMaV2 initialized (setting={setting}, H_lr={self.model.H_lr}, W_lr={self.model.W_lr}, device={device})"
+            f"RoMaV2 initialized (setting={setting}, H_lr={self.model.H_lr}, W_lr={self.model.W_lr}, "
+            f"H_input={self.h_resized}, W_input={self.w_resized}, bidirectional=False, device={device})"
         )
 
     def close(self) -> None:

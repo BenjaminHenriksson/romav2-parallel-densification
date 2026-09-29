@@ -1,0 +1,72 @@
+{
+  "state": "complete",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "prep": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/dense_output/prep.pkl",
+  "input_root": "/home/ben/Desktop/Insta360-X5-20260924",
+  "prep_sha256": "96ed9492a50911704c704ce3f912acb9adabd78574a238b36a745032259373d9",
+  "available_references": 992,
+  "reference_indices": [
+    0,
+    90,
+    180,
+    270,
+    360,
+    450,
+    540,
+    630,
+    726,
+    887,
+    1053,
+    1238
+  ],
+  "reference_images": [
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-0_orientation-0_view-0/frame_000000.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-0_orientation-0_view-2/frame_000336.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-0_orientation-0_view-0/frame_000688.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-0_orientation-0_view-2/frame_001006.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-0_orientation-1_view-0/frame_001378.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-0_orientation-1_view-2/frame_001708.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-0_orientation-1_view-0/frame_002040.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-1_orientation-0_view-2/frame_000042.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-1_orientation-0_view-2/frame_000402.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-1_orientation-0_view-3/frame_000992.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-1_orientation-1_view-1/frame_001635.png",
+    "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective/images/lens-1_orientation-0_view-2/frame_002340.png"
+  ],
+  "neighbors": 4,
+  "seed": 20260929,
+  "runs": [
+    {
+      "mode": "fast",
+      "points": 90271,
+      "wall_seconds": 14.53949903701141,
+      "pipeline_seconds": 14.53871202468872,
+      "references_with_points": 12,
+      "reprojection_px": {
+        "mean": 0.4458503723144531,
+        "median": 0.28893786668777466,
+        "p95": 1.4186370372772217,
+        "max": 1.999464750289917
+      },
+      "peak_allocated_gib": 4.5499587059021,
+      "peak_reserved_gib": 4.73046875,
+      "all_finite": true
+    },
+    {
+      "mode": "precise",
+      "points": 84807,
+      "wall_seconds": 25.53330573500716,
+      "pipeline_seconds": 25.53253412246704,
+      "references_with_points": 12,
+      "reprojection_px": {
+        "mean": 0.4383932948112488,
+        "median": 0.2792121469974518,
+        "p95": 1.413739562034607,
+        "max": 1.9993680715560913
+      },
+      "peak_allocated_gib": 15.94872236251831,
+      "peak_reserved_gib": 16.431640625,
+      "all_finite": true
+    }
+  ]
+}

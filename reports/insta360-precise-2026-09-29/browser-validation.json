@@ -1,0 +1,35 @@
+{
+  "url": "http://127.0.0.1:8879/point-compare/",
+  "views": [
+    {
+      "name": "raw",
+      "count": 7539298,
+      "loaded": true
+    },
+    {
+      "name": "reduced",
+      "count": 2429456,
+      "loaded": true
+    },
+    {
+      "name": "filtered",
+      "count": 2269856,
+      "loaded": true
+    },
+    {
+      "name": "fast_trial",
+      "count": 90271,
+      "loaded": true
+    },
+    {
+      "name": "precise_trial",
+      "count": 84807,
+      "loaded": true
+    }
+  ],
+  "shared_controls": true,
+  "ply_downloads": true,
+  "mobile_overflow": false,
+  "browser_errors": [],
+  "renderer": "headless Chrome / SwiftShader"
+}
