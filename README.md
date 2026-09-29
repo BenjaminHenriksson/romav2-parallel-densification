@@ -12,6 +12,16 @@ Parallel densification based on the completed September 25, 2026 Insta360 X5 wor
 
 The local plugin fixes confidence filtering, sampling when masks leave few candidates, and normalized-grid pixel-center conversion. Its RoMaV2 source supports cached reference features through `match_from_features`. Keep the included source instead of substituting an unverified upstream checkout.
 
+### References, neighbors and workers
+
+The Insta360 preparation contains 1,240 rectified perspective images. It selects 992 (80%) as references using sparse-point coverage. A 12-reference trial processes only 12 of those references in total; neighbors can still come from the entire prepared image set.
+
+For each reference A, the neighbor table selects four images with shared sparse observations. One matching group therefore contains five images: A plus B1–B4. The matcher extracts A's features once and processes A→B1, A→B2, A→B3 and A→B4 sequentially. The `match_grids_batch` name refers to this group, not four pairs evaluated simultaneously.
+
+At each reference pixel the pipeline selects the neighbor with the highest retained confidence, then samples up to 10,000 correspondences across the reference. Each sampled point is triangulated using A and its selected neighbor, followed by epipolar, reprojection, positive-depth and parallax checks. It does not require agreement across all four neighbors or perform joint five-image triangulation. Increasing neighbors changes matching coverage and cost, while the 10,000-sample budget remains per reference.
+
+The 12-reference trial schedules 48 directed image pairs; the 992-reference full run schedules 3,968. Parallel workers split the reference list into interleaved shards. The original six workers each processed approximately 165 references; the full Precise run uses one worker because of its larger GPU memory requirement. Each worker accumulates accepted points, and raw outputs are concatenated before optional voxel and density filtering.
+
 ## Files
 
 - `densify_parallel_gubbangen.py`: reusable `prep`, `worker`, and `merge` commands; retains its historical filename.
@@ -121,6 +131,8 @@ python -m http.server 8879 --bind 127.0.0.1 --directory /path/to/web
 
 Open `http://127.0.0.1:8879/point-compare/` on the workstation. Publishing requires the original viewer's `manifest.json` and cloud files; it transforms the trial points into that manifest's coordinate frame and adds their metadata. The server command is local-only and runs until stopped.
 
+For a full Precise run, use `--refs 992 --neighbors 4 --modes precise` with a new benchmark output directory, then publish its report with `publish_comparison.py --full-run`. This adds a full-dataset Precise panel beside the original raw cloud and filtering results while retaining both trial panels. The publisher checks that every prepared reference was included.
+
 ## Recorded result
 
 - Input: 310 native fisheye images, 155 rig poses, 1,240 rectified views.
@@ -134,3 +146,5 @@ Open `http://127.0.0.1:8879/point-compare/` on the workstation. Publishing requi
 ## Provenance and licenses
 
 The plugin derives from Shady Gmira's Lichtfeld-Densification-Plugin. Its GPL-3.0-or-later metadata and license are preserved in `docs/upstream-plugin-pyproject.toml` and `plugin/LICENSE`. RoMaV2 includes its MIT license and author notice in `plugin/RoMaV2/LICENSE`. These files preserve upstream attribution. The installed plugin came from an archive, so no verified upstream commit is claimed; exact copied source is identified by SHA-256 in the manifest.
+
+The full September 29 Precise run completed all 992 references with four neighbors each in 807.1 seconds (13.45 minutes), producing 7,311,020 unfiltered points. Median reprojection error was 0.279 px, p95 was 1.356 px, and peak allocated GPU memory was 15.95 GiB. All points were finite and within the 2-pixel reprojection gate. These point counts can be compared with the original raw Fast cloud; voxel and density filtering have not been applied to the new Precise cloud. See `reports/insta360-precise-full-2026-09-29/comparison.json`.
