@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2025 Shady Gmira
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[project]
+name = "densification"
+version = "0.8.3"
+description = "Dense point cloud initialization using RoMa v2 matching"
+authors = [{ name = "Shady Gmira" }]
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy==2.4.1",
+    "pycolmap @ https://github.com/lyehe/build_gpu_colmap/releases/download/v4.0.2/pycolmap-4.0.2%2Bcu128.bundled.cudss-cp312-cp312-manylinux_2_35_x86_64.whl ; platform_system=='Linux'",
+    "pycolmap @ https://github.com/lyehe/build_gpu_colmap/releases/download/v4.0.2/pycolmap-4.0.2%2Bcuda.cudss-cp312-cp312-win_amd64.whl ; platform_system=='Windows'",
+    "Pillow",
+    "scipy",
+    "tqdm",
+    "einops>=0.8.1",
+    "rich>=14.2.0",
+    "open3d",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
+torchvision = [{ index = "pytorch-cu128" }]
+
+[tool.lichtfeld]
+hot_reload = true
+plugin_api = ">=1,<2"
+lichtfeld_version = ">=0.5.0"
+required_features = []

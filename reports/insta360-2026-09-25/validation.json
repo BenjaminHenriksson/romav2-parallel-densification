@@ -1,0 +1,48 @@
+{
+  "source_model": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/upright/B/manhattan/sparse/0",
+  "raw_points": 7539298,
+  "points": 2429456,
+  "shards": [
+    {
+      "shard": 0,
+      "points": 1228538,
+      "mean_max_view_error_px": 0.4217497706413269
+    },
+    {
+      "shard": 1,
+      "points": 1262716,
+      "mean_max_view_error_px": 0.40771254897117615
+    },
+    {
+      "shard": 2,
+      "points": 1259270,
+      "mean_max_view_error_px": 0.4105775058269501
+    },
+    {
+      "shard": 3,
+      "points": 1257323,
+      "mean_max_view_error_px": 0.3907232880592346
+    },
+    {
+      "shard": 4,
+      "points": 1259299,
+      "mean_max_view_error_px": 0.4101351201534271
+    },
+    {
+      "shard": 5,
+      "points": 1272152,
+      "mean_max_view_error_px": 0.40720632672309875
+    }
+  ],
+  "mean_max_view_error_px": 0.4079644021772247,
+  "max_view_error_px": 1.9999966621398926,
+  "voxel_size_model_units": 0.023470080886203473,
+  "all_points_finite": true,
+  "source_model_unchanged": true,
+  "lfs_dataset": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/lfs_dataset",
+  "source_registered_images": 310,
+  "perspective_images": 1240,
+  "registered_frames": 155,
+  "alignment": "Manhattan",
+  "masks": "White keeps pixels; carrier and outer lens rim excluded"
+}

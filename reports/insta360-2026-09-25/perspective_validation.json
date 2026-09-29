@@ -1,0 +1,48 @@
+{
+  "source_images": 310,
+  "perspective_images": 1240,
+  "rigs": 1,
+  "frames": 155,
+  "virtual_cameras": 16,
+  "source_model": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/upright/B/manhattan/sparse/0",
+  "rotation_corrected_views": true,
+  "resolution": [
+    1536,
+    1536
+  ],
+  "field_of_view_degrees": 110.0,
+  "views_per_lens": 4,
+  "virtual_orientations_yaw_pitch": [
+    [
+      -40,
+      -40
+    ],
+    [
+      40,
+      -40
+    ],
+    [
+      -40,
+      40
+    ],
+    [
+      40,
+      40
+    ]
+  ],
+  "valid_lens_coverage": {
+    "2": 1.0,
+    "1": 1.0
+  },
+  "retained_sparse_points": 38108,
+  "source_sparse_points": 38118,
+  "max_rig_transform_discrepancy": 3.552713678800501e-15,
+  "source_model_unchanged": true,
+  "source_hashes": {
+    "points3D.bin": "d336a8029f5b89c86b46b7003913771819c1795d4f21a74bdabda53066d66623",
+    "frames.bin": "eb03796aff3edce1b7881dde90d08fde818084d2d5801b953c271a2beddd58e5",
+    "rigs.bin": "d92cf5902ac9ff4b96e44cba19dc1ec45027155ed7ab40bcf18a87f4155074e3",
+    "cameras.bin": "905e8dd02ebd9fce5f92c6e9ff4502b0c24d386e246cbe270a125166ad627ef7",
+    "images.bin": "240394bffb71615e78f53356184f71d3d6765037cb794cb844309bd01f735cea"
+  }
+}

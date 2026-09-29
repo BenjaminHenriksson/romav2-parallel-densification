@@ -1,0 +1,11 @@
+# Install CUDA-compatible torch and torchvision separately before these.
+# Versions observed in the existing densification environment on 2026-09-29.
+numpy==2.4.1
+scipy==1.17.1
+Pillow==12.2.0
+pycolmap==4.0.2
+einops==0.8.2
+rich==15.0.0
+tqdm==4.68.2
+# The optional Insta360 preparation/preview scripts additionally need
+# OpenCV and matplotlib; they originally ran in a separate Python 3.12 env.

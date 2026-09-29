@@ -1,0 +1,13 @@
+{
+  "transport": "archive",
+  "origin": "https://github.com/shadygm/Lichtfeld-Densification-Plugin@main",
+  "github_url": "https://github.com/shadygm/Lichtfeld-Densification-Plugin",
+  "owner": "shadygm",
+  "repo": "Lichtfeld-Densification-Plugin",
+  "requested_ref": "main",
+  "resolved_ref": "main",
+  "registry_id": "community:densification",
+  "version": "0.7.0",
+  "archive_url": "https://api.github.com/repos/shadygm/Lichtfeld-Densification-Plugin/tarball/main",
+  "schema": 1
+}

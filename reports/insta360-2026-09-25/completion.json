@@ -1,0 +1,54 @@
+{
+  "stage": "complete",
+  "elapsed_seconds": 218,
+  "updated_at": 1790335532.6960106,
+  "workers": [
+    {
+      "shard": 0,
+      "pid": 1470901,
+      "exit_code": 0,
+      "percent": 90.0,
+      "message": "Finalizing triangulation..."
+    },
+    {
+      "shard": 1,
+      "pid": 1470902,
+      "exit_code": 0,
+      "percent": 90.0,
+      "message": "Finalizing triangulation..."
+    },
+    {
+      "shard": 2,
+      "pid": 1470903,
+      "exit_code": 0,
+      "percent": 90.0,
+      "message": "Finalizing triangulation..."
+    },
+    {
+      "shard": 3,
+      "pid": 1470904,
+      "exit_code": 0,
+      "percent": 90.0,
+      "message": "Finalizing triangulation..."
+    },
+    {
+      "shard": 4,
+      "pid": 1470905,
+      "exit_code": 0,
+      "percent": 90.0,
+      "message": "Finalizing triangulation..."
+    },
+    {
+      "shard": 5,
+      "pid": 1470906,
+      "exit_code": 0,
+      "percent": 90.0,
+      "message": "Finalizing triangulation..."
+    }
+  ],
+  "source_model": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/upright/B/manhattan/sparse/0",
+  "points": 2429456,
+  "dataset": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/lfs_dataset",
+  "ply": "dense_point_cloud.ply",
+  "viewer": "dense/"
+}

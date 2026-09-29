@@ -1,0 +1,292 @@
+{
+  "snapshot_date": "2026-09-29",
+  "completed_run_date": "2026-09-25",
+  "source_directory": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan",
+  "files": [
+    {
+      "path": "densify_parallel_gubbangen.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/densify_parallel_gubbangen.py",
+      "sha256": "ba61974326c53f780c89473f9a626e5ffcdc6df805bad681064fbe99dd15cd42"
+    },
+    {
+      "path": "prepare_views.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/prepare_views.py",
+      "sha256": "ddbe952436fbc9fd8139b7624b65e6ecd037a7d50cf8c74e6d058435cec23a12"
+    },
+    {
+      "path": "run_parallel.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/run_parallel.py",
+      "sha256": "23d819dcc4a2bcc66bbf4806b709c2299b3d8cc00bb85df6c0da8092cb8532df"
+    },
+    {
+      "path": "finalize_dense.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/finalize_dense.py",
+      "sha256": "41842ca7c36907f378c17a029a69a68f11504b531f5d6840a23f109783a27dba"
+    },
+    {
+      "path": "config.json",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/config.json",
+      "sha256": "1336488d8b392325769807b218628ffad28542759db4b0da46a2871555ca5087"
+    },
+    {
+      "path": "docs/INSTA360_WORKFLOW.md",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/README.md",
+      "sha256": "f5c45276c2238e99c1946cff0fedd222f6a8e6dca26c834e926afd1b57556988"
+    },
+    {
+      "path": "reports/insta360-2026-09-25/completion.json",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/completion.json",
+      "sha256": "3b107a57ffe677a7ef686f89b8c3d50261c39836bdc2b1a2b85bb27ac77099d5"
+    },
+    {
+      "path": "reports/insta360-2026-09-25/validation.json",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/validation.json",
+      "sha256": "00e09b48b6f6205af3795ce768352fabdea84c78949d93ae632e440cc2fa9c54"
+    },
+    {
+      "path": "reports/insta360-2026-09-25/perspective_validation.json",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/perspective_validation.json",
+      "sha256": "0144476fcf87020a99c5790bb1e22c02aa82f94687dc212099ef78601cca5b42"
+    },
+    {
+      "path": "plugin/densify.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/densify.py",
+      "sha256": "a8d9aeb0575d37130664d97855d112634a157d20b5f8ceb10c169a63516eeb4c"
+    },
+    {
+      "path": "plugin/core/sampling.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/sampling.py",
+      "sha256": "0685d2c472f5c82acac8e41f9c0bab0bdc7e4ab7d901482216914a896812429c"
+    },
+    {
+      "path": "plugin/core/geometry.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/geometry.py",
+      "sha256": "86c6e9b26de7bfe323a6a834562dae8c9dac1b678b459ef403e0e709c57bbfb8"
+    },
+    {
+      "path": "plugin/core/config.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/config.py",
+      "sha256": "73d43ec4588db1d96cda308341ade30c22999f67e061d354fe5c9b1366933321"
+    },
+    {
+      "path": "plugin/core/selection.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/selection.py",
+      "sha256": "8c8eb4eee52ba244268d9517384e97abc01a5b59946cb5cc03c3bd6e0e95c0e2"
+    },
+    {
+      "path": "plugin/core/debug_viz.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/debug_viz.py",
+      "sha256": "d175d791daa69b6c9a7e3d701c2c66aa265f7a492d637ee0f73aa21c9479c820"
+    },
+    {
+      "path": "plugin/core/writers.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/writers.py",
+      "sha256": "9e25980dc8738986a9b3b0392b3a8c5a3f96974f0e31bd5b644cbf6d28bcd102"
+    },
+    {
+      "path": "plugin/core/image_utils.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/image_utils.py",
+      "sha256": "67a89e34bfb8d8f30be915fd27b6b0dd945f4c34212a62fca9ce8aad0cfacbf8"
+    },
+    {
+      "path": "plugin/core/matcher.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/matcher.py",
+      "sha256": "e25bd878aae3aa37fcfaf040c155d2c08f5796f9047aaaa396d53d4e89e335b5"
+    },
+    {
+      "path": "plugin/core/pipeline.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/pipeline.py",
+      "sha256": "6c52a832e196afc41669920e4e0ef81dc1097e51de407d0c3e358bdc3cf32c5c"
+    },
+    {
+      "path": "plugin/core/threaded_dataloader.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/threaded_dataloader.py",
+      "sha256": "bff58c6ab741e522b999fdf882381e8602cfb26de5bb61443df01461e821e194"
+    },
+    {
+      "path": "plugin/core/camera_models.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/camera_models.py",
+      "sha256": "5c0a77c6a271556e76c4522c807555a093baa31ce96b76bc5a6ed71c48fc2cf6"
+    },
+    {
+      "path": "plugin/core/__init__.py",
+      "source": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/dense-upright-B-manhattan/plugin/core/__init__.py",
+      "sha256": "9d54d83673dee9fbeb906093faae434706798552ddb377f698ffd21ef4c1583a"
+    },
+    {
+      "path": "plugin/LICENSE",
+      "source": "/home/ben/.lichtfeld/plugins/densification/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "docs/upstream-plugin-pyproject.toml",
+      "source": "/home/ben/.lichtfeld/plugins/densification/pyproject.toml",
+      "sha256": "72d74823d9eb59ddfa7dd8a83f959721a0825e7681d3f7ed94f5cfbe6848efc6"
+    },
+    {
+      "path": "docs/upstream-plugin-source.json",
+      "source": "/home/ben/.lichtfeld/plugins/densification/.lichtfeld-source.json",
+      "sha256": "d9c3bc63856fdc96c5ac8dc9b3b15c51136a6f5db6326fb1e16a9dffeca1df88"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/refiner.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/refiner.py",
+      "sha256": "b3495b265e4414bf896b40db37ef187d522f9bdc9ed8000b1915a951f2119297"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/geometry.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/geometry.py",
+      "sha256": "ab0f9bcd374ea272f8e9da13948bba8917f86fdfe7d4ca6ce76c6d040b1db105"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vis.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vis.py",
+      "sha256": "6eb70ce37f4dc568dc0b9632615a879493c28e4ffccda60932524c62d7537f27"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/romav2.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/romav2.py",
+      "sha256": "36615c7f1cdff3a844c6a5697337a71c4bd7b8a0dc73b3704a06c9b40b438b70"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/io.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/io.py",
+      "sha256": "45715ed1128e213e0fdaa1e2149480abd099a31d838a1776baa695b05b4aecc7"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/device.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/device.py",
+      "sha256": "df36f7f1b527a874676ede2fac5330edf68768c2fecda67ac97cb8802104b1cf"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/logging.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/logging.py",
+      "sha256": "95e810e9bdbfe4eb6a2e18b742105e650b8d85965047d9ee480089ac292784ab"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/features.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/features.py",
+      "sha256": "9b868c97d3fb362491647d53fbe99ec6acc5ea0870afa4b93aa44d58b9362f0d"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/normalizers.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/normalizers.py",
+      "sha256": "c8e6fe3bc39571ff2231a18e9755fa3f906e0b35462bd78b10cc3b1b2cda7199"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/dpt.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/dpt.py",
+      "sha256": "254aebb9b5fb02ffc90e3838ed4e5d27bb423912a680034a7f6af21f9e2d22e9"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/local_correlation.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/local_correlation.py",
+      "sha256": "484a4464626519abd0f75ebfebecc8970bd9b2c8840fa468779176c0fcef5167"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/matcher.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/matcher.py",
+      "sha256": "b5db2b991d35b1bd217db70763d10d71bd690a600ab875665daf94a54e44a3b6"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/types.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/types.py",
+      "sha256": "28d0f9ab8b525955d88ec2b78008c25585cbdc55e6b206f25d36064b95d7ecad"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/__init__.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/__init__.py",
+      "sha256": "df28288148aec8fee82e98c7c5b60fda32a58a713ea4dc35ff4a266383abf67a"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/benchmarks/wxbs.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/benchmarks/wxbs.py",
+      "sha256": "c43d25acca46530b81ee2e396b14feac69cae0684a5ddfd589444abd2aecd1a7"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/benchmarks/scannet1500.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/benchmarks/scannet1500.py",
+      "sha256": "7c3c90066f8332111028aecff3fcfc76b4ed583ee54e6fb2a6814b12d780fca9"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/benchmarks/satast.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/benchmarks/satast.py",
+      "sha256": "e8d8b9cdcf4edebef86feb9ffbd04a466efccc36ce009be0eebd676eee841af1"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/benchmarks/mega1500.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/benchmarks/mega1500.py",
+      "sha256": "22ab9bbb61da26ff0435f70074b1035b3405847a6315858093591c39d644e1a1"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/benchmarks/__init__.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/benchmarks/__init__.py",
+      "sha256": "456532eecea9213800c00ffa8b84cf810f497979d47f73e462fd7c2adcee1119"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/rms_norm.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/rms_norm.py",
+      "sha256": "8509ffc53f0bbe9e353a8b9e57ca2396795640b4ecc85140c27b17127c971869"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/block.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/block.py",
+      "sha256": "7a29e98fe194eb22fc87b44e9aed1c08006abe62f4a838b1d22803506fd1193a"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/rope.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/rope.py",
+      "sha256": "f32f800a764ef1dc03033920099cf99605f83b57fc1a7db3b62a749046ba538f"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/ffn_layers.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/ffn_layers.py",
+      "sha256": "fc8f2e48e8a4399b192fd17d34a9db16924403d08a53e93ef4076138029c6c54"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/layer_scale.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/layer_scale.py",
+      "sha256": "f9a10ee763a62136f9e814bfe2f2209c2cb501dfdc5573f858ab01ba9a69c23f"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/utils.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/utils.py",
+      "sha256": "f437b96bce57102bbac8c2c53f897e750e7bd8fed508d66dbd6a00abda7fbe5a"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/rope_mixed.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/rope_mixed.py",
+      "sha256": "50e15241ebdc499028fb69c42dc7c8427d6d06cba212eb50636b2413b5ade28a"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/patch_embed.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/patch_embed.py",
+      "sha256": "28b2722ba56799405e702bf814018399cc6ef37a35568daf46726a116240b383"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/attention.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/attention.py",
+      "sha256": "eb8bab3383b7d665bf4659109d0006d9a628503bc663fdaf810c028515e04671"
+    },
+    {
+      "path": "plugin/RoMaV2/src/romav2/vit/__init__.py",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/src/romav2/vit/__init__.py",
+      "sha256": "567ab9d1db072ffb0b23601d48ca78a165aadd04fdf87fd7f8fd09d11a12d908"
+    },
+    {
+      "path": "plugin/RoMaV2/LICENSE",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/LICENSE",
+      "sha256": "90aa528b008e22e4b20ae4b65edf960995de532ecb3552c0f72502a8870c181a"
+    },
+    {
+      "path": "plugin/RoMaV2/README.md",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/README.md",
+      "sha256": "6d3df05f9113f47b992491003eb898f507c14522001fceafdb90ec0d1335b226"
+    },
+    {
+      "path": "plugin/RoMaV2/pyproject.toml",
+      "source": "/home/ben/.lichtfeld/plugins/densification/RoMaV2/pyproject.toml",
+      "sha256": "66fbd0e28d914397f98c2600afd408652937acf3793ba7e3adaef74dbd22641b"
+    }
+  ]
+}

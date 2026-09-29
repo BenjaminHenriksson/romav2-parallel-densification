@@ -1,0 +1,13 @@
+{
+  "workers": 6,
+  "source_model": "/home/ben/Desktop/Insta360-X5-20260924/reconstruction-174007/upright/B/manhattan/sparse/0",
+  "voxel_size_model_units": 0.023470080886203473,
+  "voxel_rule": "half the median nearest-neighbor spacing of the accepted sparse cloud",
+  "scale": "arbitrary original reconstruction units; not meters",
+  "roma": "fast",
+  "neighbors": 4,
+  "reference_fraction": 0.8,
+  "confidence": 0.9,
+  "reprojection_threshold_px": 2,
+  "matches_per_reference": 10000
+}

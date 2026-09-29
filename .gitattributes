@@ -1,0 +1,2 @@
+# Preserve whitespace in copied upstream/local plugin snapshots for hash verification.
+plugin/** -whitespace
